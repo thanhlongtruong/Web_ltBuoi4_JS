@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="3a.css">
+</head>
+<body>
+    <!--Xây dựng trang web có một ô textbox, một button.
+    Khi click vào button thì in các số từ 1 tới giá trị trong ô textbox.-->
+    Nhập số: <input type="text" id="number" value="0">
+    <input type="button" onclick="print_number()" value="OK">
+
+    <script type="text/javascript">
+        function print_number(){
+            var number = parseInt(document.getElementById('number').value);
+            var html = '';
+            for(var i=1;i<=number;i++)
+            {
+                html+=i;
+                document.getElementById('number').value=html;
+            }
+        }
+    </script>
+</body>
+</html>

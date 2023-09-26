@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docuent</title>
+</head>
+<body>
+    <!--Tạo ra 4 textbox có tên lần lượt là: MauNen, MauChu, TieuDe, TrangThai và một nút có tên là ThayDoi, value là “Thay đổi”.
+    Khi người dùng click vào nút ThayDoi thì màu nền, màu chữ, tiêu đề của tài liệu và thanh trạng thái của cửa sổ trình duyệt
+    sẽ được thay đổi bằng các giá trị trong text tương ứng.-->
+    MauNen: <input id="Mau_Nen" type="text"><br>
+    MauChu: <input id="Mau_Chu" type="text"><br>
+    TieuDe: <input id="Tieu_De" type="text"><br>
+    TrangThai: <input id="Trang_Thai" type="text"><br><br>
+
+    <button type="button" value="Thay đổi" onclick="Thay_doi()">Thay đổi</button>
+    <script language="javascript">
+        
+        var mau_nen = document.getElementById('Mau_Nen');
+        var mau_chu = document.getElementById('Mau_Chu');
+        var tieu_de = document.getElementById('Tieu_De');
+        var trang_thai = document.getElementById('Trang_Thai');
+
+        function Thay_doi(){
+            var bg_color = mau_nen.value;
+            document.body.style.backgroundColor = bg_color;
+            var t_color = mau_chu.value;
+            document.body.style.color = t_color;
+            var tieuDe = tieu_de.value;
+            document.title = tieuDe.value;
+            var trangThai = trang_thai.value;
+            window.status = trangThai;
+        }
+    </script>
+</body>
+</html>

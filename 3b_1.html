@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="time"></p>
+    <script languagr="javascript">
+        var Intervel = setInterval(myInterval, 1000);
+        function myInterval(){
+            var a = new Date();
+            document.getElementById('time').innerHTML=a.toLocaleTimeString();
+            document.body.style.textAlign='center';
+            document.body.style.fontSize='200px';
+            document.body.style.backgroundColor='black';
+            document.body.style.color='blue';
+        }
+    </script>
+</body>
+</html>

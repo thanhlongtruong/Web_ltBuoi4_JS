@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Xây dựng trang web giải phương trình bậc 2.-->
+    Nhập a: <input id="a" type="number"><br>
+    Nhập b: <input id="b" type="number"><br>
+    Nhập c: <input id="c" type="number"><br>
+    <input type="button" value="Tính" onclick="Delta()">
+    <p id="kq"></p>
+
+    <script language="javascript">
+        
+        function Delta(){
+            var a = parseFloat(document.getElementById('a').value);
+            var b = parseFloat(document.getElementById('b').value);
+            var c = parseFloat(document.getElementById('c').value);
+
+            var B = b /2;
+            var delta = Math.pow(B,2) - (a*c);
+            if(delta < 0){
+                document.getElementById('kq').innerText = "Phương trình vô nghiệm";
+            }
+            else if(delta == 0){
+                var x = -B / a;
+                document.getElementById('kq').innerText= "Phương trình có nghiệp kép x1 = x2" + x;
+            }
+            else{
+                var x1 = (-B + Math.sqrt(delta)) / a
+                var x2 = (-B - Math.sqrt(delta)) / a
+                document.getElementById('kq').innerText = "Phương trình có 2 nghiệp phân biệt:\n x1 =" + x1 + "\n" + "x2 = " + x2; 
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Tạo 2 nút, nút thứ nhất có value = “Xanh”, nút thứ hai có value = “Đỏ”.
+    Khi người dùng click vào nút xanh thì màu nền của trang web là xanh (blue), còn khi người dùng click vào nút đỏ thì màu nền của tài liệu là đỏ (red).-->
+    <input type="button" id="Xanh" value="xanh" onclick="Xanh()">
+    <input type="button" id="Đỏ" value="đỏ" onclick="Đỏ()">
+
+    <script language="javascript">
+        function Xanh(){
+            document.body.style.backgroundColor = 'blue';
+        }
+        function Đỏ(){
+            document.body.style.backgroundColor = 'red';
+        }
+    </script>
+</body>
+</html>
